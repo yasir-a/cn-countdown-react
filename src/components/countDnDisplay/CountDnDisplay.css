@@ -1,0 +1,38 @@
+.cd-display-container {
+  height: 100%;
+  width: 100%;
+}
+.cd-display-timer {
+  font-size: 190px;
+  font-weight: 700;
+  padding-left: 80px;
+}
+.cd-display-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  height: 80px;
+  position: absolute;
+  top: 48%;
+  right: 23%;
+}
+.cd-display-btn-pause {
+  height: 100%;
+  width: 100%;
+}
+.twenty-sec-remain {
+  color: red;
+}
+
+@keyframes blinkDisplay {
+  0% {
+    color: auto;
+  }
+  80% {
+    color: transparent;
+  }
+}
+
+.ten-sec-remain-blink {
+  animation: blinkDisplay 600ms infinite ease-in-out;
+}

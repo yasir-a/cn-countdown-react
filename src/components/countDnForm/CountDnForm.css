@@ -1,0 +1,26 @@
+.cd-form-container {
+  display: flex;
+  justify-content: center;
+}
+.cd-form-title {
+  font-size: 22px;
+  margin: 0 5px;
+  align-self: center;
+  font-weight: 600;
+}
+.cd-form-input {
+  width: 180px;
+  height: 60px;
+  margin: 0 5px;
+  font-size: 20px;
+  padding-left: 10px;
+}
+.cd-form-btn {
+  height: 60px;
+  width: 150px;
+  background-color: rgb(70, 171, 144);
+  margin: 0 5px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
