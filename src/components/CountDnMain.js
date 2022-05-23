@@ -8,7 +8,6 @@ import "./CountDnMain.css";
 const CountDnMain = () => {
   const [inputCounter, setInputCounter] = useState(0);
   const [counter, setCounter] = useState(0);
-  const [counterStarted, setCounterStarted] = useState(false);
   const [isCounterRunning, setIsCounterRunning] = useState(false);
   const [speed, setSpeed] = useState(1);
   const [activePaceId, setActivePaceId] = useState(1);
@@ -16,7 +15,6 @@ const CountDnMain = () => {
   const resetCount = () => {
     setCounter(0);
     setIsCounterRunning(false);
-    setCounterStarted(false);
     setSpeed(1);
   };
 
@@ -36,7 +34,6 @@ const CountDnMain = () => {
     const counter = parseInt(inputVal) * 60;
     setCounter(counter);
     setInputCounter(counter);
-    setCounterStarted(true);
     setIsCounterRunning(true);
     setSpeed(1);
   };
@@ -65,11 +62,10 @@ const CountDnMain = () => {
       <CountDnAlert
         counter={counter}
         inputCounter={inputCounter}
-        counterStarted={counterStarted}
+        isCounterRunning={isCounterRunning}
       />
       <CountDnDisplay
         counter={counter}
-        counterStarted={counterStarted}
         onClick={handleCounterRunning}
         isCounterRunning={isCounterRunning}
       />

@@ -1,11 +1,11 @@
 import "./CountDnAlert.css";
 
-const CountDnAlert = ({ counter, counterStarted, inputCounter }) => {
+const CountDnAlert = ({ counter, inputCounter, isCounterRunning }) => {
   const renderAlert = () => {
     let alert = "";
-    if (counterStarted && counter === 0) {
+    if (!isCounterRunning && counter === 0) {
       alert = "Time's up!";
-    } else if (counterStarted && counter / inputCounter <= 0.5) {
+    } else if (isCounterRunning && counter / inputCounter <= 0.5) {
       alert = "More than halfway there!";
     }
     return alert;

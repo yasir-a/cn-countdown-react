@@ -12,17 +12,14 @@ const timeFormat = (counter) => {
   return `${formattedMin}:${formattedSec}`;
 };
 
-const CountDnDisplay = ({
-  counter,
-  onClick,
-  isCounterRunning,
-  counterStarted,
-}) => {
+const CountDnDisplay = ({ counter, onClick, isCounterRunning }) => {
   const formattedCounter = timeFormat(counter);
   const twentySecRemain =
-    counterStarted && counter < 21 && counter !== 0 ? "twenty-sec-remain" : "";
+    isCounterRunning && counter < 21 && counter !== 0
+      ? "twenty-sec-remain"
+      : "";
   const blinkDisplay =
-    counterStarted && counter < 11 && counter !== 0
+    isCounterRunning && counter < 11 && counter !== 0
       ? "ten-sec-remain-blink"
       : "";
 
@@ -34,7 +31,7 @@ const CountDnDisplay = ({
       <button
         className='cd-display-btn'
         onClick={onClick}
-        disabled={!counterStarted || counter === 0}
+        disabled={!isCounterRunning && counter === 0}
       >
         {isCounterRunning && counter !== 0 ? (
           <AiOutlinePauseCircle className='cd-display-btn-pause' />
