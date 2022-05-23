@@ -16,6 +16,7 @@ const CountDnMain = () => {
     setCounter(0);
     setIsCounterRunning(false);
     setSpeed(1);
+    setActivePaceId(1);
   };
 
   useEffect(() => {
@@ -35,7 +36,6 @@ const CountDnMain = () => {
     setCounter(counter);
     setInputCounter(counter);
     setIsCounterRunning(true);
-    setSpeed(1);
   };
 
   const handleCounterRunning = () => {
@@ -47,7 +47,6 @@ const CountDnMain = () => {
   };
 
   const handleOnChangeSpeed = (pace, id) => {
-    console.log(pace, id);
     setSpeed(pace);
     setActivePaceId(id);
   };
