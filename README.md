@@ -1,3 +1,3 @@
 # CountDown React App
 
-## Preview (https://cn-countdown-react.herokuapp.com/)
+## Preview (https://yasir-a.github.io/cn-countdown-react)

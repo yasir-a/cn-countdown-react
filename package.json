@@ -1,6 +1,7 @@
 {
   "name": "cn-countdown-react",
   "version": "0.1.0",
+  "homepage": "https://yasir-a.github.io/cn-countdown-react",
   "private": true,
   "dependencies": {
     "react": "^18.1.0",
@@ -9,6 +10,8 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
