@@ -22,10 +22,10 @@ const CountDnMain = () => {
   useEffect(() => {
     const counterZero = counter === 0;
     if (isCounterRunning && !counterZero) {
-      const id = window.setInterval(() => {
+      const interval = window.setInterval(() => {
         setCounter((counter) => counter - 1);
       }, Math.floor(1000 / speed));
-      return () => window.clearInterval(id);
+      return () => window.clearInterval(interval);
     } else if (counterZero) {
       resetCount();
     }
